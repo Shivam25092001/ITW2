@@ -17,19 +17,35 @@ const userSchema = new mongoose.Schema({
     },
     email:{
         type: String,
-        required: [true, "Please enter your email ID"],
+        required: [true, "email ID not registered!"],
         unique: true,
         validate: [validator.isEmail, "Please enter a valid email address" ]
     },
     password: {
         type: String,
         required: [true, "Please Enter your password"],
-        minlength: [8, "Password cannot be smaller than 8 charecetrs"],
+        minlength: [5, "Password cannot be smaller than 8 charecetrs"],
         select: false,
     },
     role: {
         type: String,
+        enum: ["student", "teacher", "admin"],
         default: "student"
+    },
+    course: {
+        type: String,
+        enum: ["CSE", "ECE"],
+        required : [true, "Please enter your Course"],
+    },
+    mobile:{
+        type: String,
+        required: [true, "Please enter your contact number"],
+        unique: true,
+        validate: [validator.isMobilePhone, "Please enter a valid mobile number" ]
+    },
+    address:{
+        type: String,
+        required: [true, "Please enter your residential address"],
     },
 
     resetPasswordToken: String,
