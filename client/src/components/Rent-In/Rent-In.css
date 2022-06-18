@@ -1,0 +1,20 @@
+.Rent-in{
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 3rem;
+}
+
+.Featured-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1110px){
+    .Rent-in{
+        padding: 10vw;
+    }
+    .Featured-section{
+        flex-direction: column;
+    }
+}

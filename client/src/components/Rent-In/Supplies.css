@@ -1,0 +1,121 @@
+.supplyItemCard {
+    width: 19vw;
+    min-width: 19vw;
+    background: white;
+    margin: 2rem 0.1rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.supplyItemCard:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.photo{
+    max-width: 19vw;
+    height: 50%;
+    padding: 30px;
+    text-align: center;
+    float: left;
+}
+.photo > img{
+    width: 100%;
+    max-height: 240px; 
+    object-fit: contain;
+}
+
+
+.description{
+    padding: 30px;
+    float: left;
+}
+.description > div{
+    display: flex;
+    justify-content: space-between;
+}
+.description > div > h1{
+    color: #515151;
+    font-weight: 300;
+    padding-top: 15px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+.description > h2{
+    color: #515151;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+}
+.description > h4{
+    margin: 0;
+    color: #727272;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+}
+.description > div > span{
+    font-size: 12px; 
+    line-height: 20px;
+    color: #727272;
+    padding: 20px 0;
+    margin: 0;
+}
+.supplyItemCard-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.supplyItemCard-buttons > button{
+    outline: 0;
+    border: 0;
+    background: none;
+    border: 1px solid #d9d9d9;
+    padding: 8px 0px;
+    margin-top: 8px;
+    color: #515151;
+    text-transform: uppercase;
+    width: 100%;
+    font-family: inherit;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;   
+}
+.supplyItemCard-buttons > button:hover{
+    border: 1px solid #aedaa6;
+    color: #aedaa6;
+    cursor: pointer;   
+}
+
+
+@media screen and (max-width: 1110px){
+    .supplyItemCard{
+        width: auto;
+        margin: 0%;
+        margin-top: 5vh;
+        flex-direction: row;
+    }
+    .photo{
+        padding: 0%;
+        padding-left: 20px;
+        width: 100%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .supplyItemCard-buttons{
+        display: none !important;
+    }
+    .description{
+        width: 100%;
+        padding: 20px;
+    }
+    .description> div > span{
+        text-align: right;
+    }
+    .description > h2{
+        font-size: 21px;
+    }
+}

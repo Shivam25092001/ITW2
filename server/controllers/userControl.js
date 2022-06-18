@@ -1,7 +1,7 @@
 import User from "../models/userModel.js";
 import sendToken from "../utils/jwtcreater.js";
 import ErrorHandler from "../utils/errorhandler.js";
-import userList from "../utils/csvtojson.js";
+import sendMail from '../utils/sendMail.js'
 import csv from "csvtojson";
 //const csvFilePath='../Testcsv.csv';
 import path, {dirname} from "path";
@@ -12,6 +12,7 @@ const __dirname = dirname(__filename);
 //Register new user
 const registerUser = async (req, res, next)=>{
     const { name, rollno, password, course, mobile, address, role } = req.body;
+    console.log(req.body);
 
     const user = await User.create({
         name : name, 
@@ -32,7 +33,6 @@ const registerUser = async (req, res, next)=>{
 
 //register user from csv
 const registerFromCSV = async (req, res, next) => {
-
     try {
         if(req.file == undefined){
             return res.status(400).send("Please upload an excel file");
@@ -67,7 +67,6 @@ const registerFromCSV = async (req, res, next) => {
             message: "Could not upload the file: " + req.file.originalname,
         });
     }
-    
 };
 
 
@@ -75,6 +74,7 @@ const registerFromCSV = async (req, res, next) => {
 const Login = async (req, res, next)=>{
     const {email, password} = req.body;
 
+    console.log(req.body);
     //Checking if user has provided complete credentials
     if(! (email || password)){
         return next(new ErrorHandler("Please enter email & password", 400));

@@ -20,7 +20,7 @@ router.put("/password/reset/:token", resetpass);
 router.put("/password/update",isUserAuthentic, updatePassword);
 router.put("/me/update",isUserAuthentic, updateProfile);
 
-router.get("/users",authorizeRoles("admin"), getUsers);
+router.get("/users", getUsers);
 router.get("/me", getUserDetails);
 router.get("/users/:id", getSingleUser);
 router.put("/users/:id",isUserAuthentic, authorizeRoles("admin"), updateRole);

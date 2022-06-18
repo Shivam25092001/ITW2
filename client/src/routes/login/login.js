@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import "./login.css";
+import axios from 'axios'
 
 const Login = () => {
-  const [username, setUsername] = useState(" ");
+  const [email, setUsername] = useState(" ");
   const [password, setPassword] = useState(" ");
+
+  const sendData = async ()=>{
+    var obj = {email: email, password};
+    console.log(obj);
+    var response = await axios.post("/login", obj);
+  }
   return (
     <div className="container">
       <div className="form-box">
@@ -53,7 +60,7 @@ const Login = () => {
                 }}
               />
             </div>
-            <button type="submit" className="btn btn-secondary btn-block">
+            <button type="submit" className="btn btn-secondary btn-block" onClick={()=>sendData()}>
               LOGIN
             </button>
             <div className="message">
