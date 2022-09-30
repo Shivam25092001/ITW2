@@ -24,8 +24,8 @@
     padding-right: 15vw;
 }
 .line{
-    background-color: rgb(191, 190, 190);
-    width: 3px;
+    background-color: rgb(181, 190, 190);
+    width: 2px;
     height: 45vh;
 }
 .title{
@@ -38,7 +38,7 @@
     padding: 0.5rem;
     margin-top: 3vh;
     border-radius: 0.3rem;
-    box-shadow: 2px 3px 5px 2px #dfdfdf;
+    box-shadow: 1px 2px 2px 2px #dfdfdf;
     border: solid 2px grey;
 }
 .left-button:hover, .right-button:hover{
@@ -50,7 +50,7 @@
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 770px){
     .home{
         flex-direction: column;
     }
