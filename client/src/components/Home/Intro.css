@@ -7,7 +7,7 @@
 .home{
     display: flex;
     align-items: center;
-    height: 80vh;
+    height: 81vh;
 }
 .child{
     display: flex;
@@ -24,8 +24,8 @@
     padding-right: 15vw;
 }
 .line{
-    background-color: rgb(190, 190, 190);
-    width: 2px;
+    background-color: rgb(191, 190, 190);
+    width: 3px;
     height: 45vh;
 }
 .title{
@@ -38,13 +38,13 @@
     padding: 0.5rem;
     margin-top: 3vh;
     border-radius: 0.3rem;
-    box-shadow: 2px 2px 5px 2px #dfdfdf;
-    border: solid 2px white;
+    box-shadow: 2px 3px 5px 2px #dfdfdf;
+    border: solid 2px grey;
 }
 .left-button:hover, .right-button:hover{
     border: solid 2px #203864;
     color: #203864;
-    box-shadow: 5px 5px 5px 2px #dfdfdf;
+    box-shadow: 5px 6px 5px 2px #dfdfdf;
     transition: all 0.3s ease-in-out;
 }
 
@@ -61,7 +61,7 @@
         padding-left: 10vw;
     }
     .line{
-        height: 2px;
+        height: 3px;
         width: 80vw;
     }
 }
