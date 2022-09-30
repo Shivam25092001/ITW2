@@ -7,7 +7,7 @@
 }
 .logo{
     font-family: 'Fredoka', sans-serif;
-    font-size: 5vh;
+    font-size: 7vh;
     /* padding-left: 10px; */
     grid-column: 2/3;
 }
@@ -15,7 +15,7 @@
     text-align: end;
 }
 .top-section{
-    width: 100%;
+    width: 99%;
     height: 10vh;
     display: -ms-grid;
     display: grid;
@@ -24,7 +24,7 @@
     align-items: center;
 }
 .bottom-section{
-    margin: 0rem 6rem 0rem 6rem;
+    margin: 0rem 5rem 0rem 6rem;
     display: flex;
     justify-content: center;
 }
@@ -38,23 +38,23 @@
 }
 .nav-links a{
     text-decoration: none;
-    color: black;
+    color: blue;
 }
 .nav-link{
     width: 100%;
     justify-self: flex-start;
-    border-right: 1px solid rgb(95, 95, 95);
+    border-right: 1px solid rgb(96, 98, 96);
 }
 .nav-link:not(:first-child){
-    padding-left: 10px;
+    padding-left: 11px;
 }
 
 
 .burger div {
-    background-color: rgb(63, 63, 63);
-    width: 25px;
+    background-color: rgb(61, 61, 61);
+    width: 22px;
     height: 3px;
-    margin: 3px 5px 3px 5px;
+    margin: 2px 6px 2px 5px;
     border-radius: 2px;
     transition: all 0.4s ease;
 }
@@ -63,7 +63,7 @@
 }
 
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1120px) {
     .top-section{
         grid-template-columns: 10vw 1fr 1fr 10vw;
         -ms-grid-columns: 10vw 1fr 1fr 10vw;
@@ -93,7 +93,7 @@
     }
     .burger-active div:nth-child(1){
         background-color: rgb(63, 63, 63);
-        width: 25px;
+        width: 28px;
         height: 3px;
         margin: 3px 5px 3px 5px;
         border-radius: 2px;
